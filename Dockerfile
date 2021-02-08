@@ -12,7 +12,7 @@ RUN set -eux \
     && chmod a+x /usr/local/bin/attr
 
 # Install gomplate
-COPY --from=hairyhenderson/gomplate:v3.6.0-slim /gomplate  /usr/bin/gomplate
+COPY --from=hairyhenderson/gomplate:v3.9.0-alpine /gomplate  /usr/bin/gomplate
 
 ADD rootfs /
 
