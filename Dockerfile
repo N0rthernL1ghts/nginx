@@ -6,9 +6,9 @@ ENV WEB_ROOT html
 RUN set -eux \
     && apk add --update --upgrade --no-cache nginx tzdata \
     && addgroup -g 82 -S www-data \
-	&& adduser -u 82 -D -S -G www-data www-data \
-	&& mkdir -p /var/www/html \
-	&& wget -O /usr/local/bin/attr https://gist.githubusercontent.com/xZero707/7a3fb3e12e7192c96dbc60d45b3dc91d/raw/f3e905e2f6c4b9496904c8251b51fbab99c600df/attr.sh \
+    && adduser -u 82 -D -S -G www-data www-data \
+    && mkdir -p /var/www/html \
+    && wget -O /usr/local/bin/attr https://gist.githubusercontent.com/xZero707/7a3fb3e12e7192c96dbc60d45b3dc91d/raw/f3e905e2f6c4b9496904c8251b51fbab99c600df/attr.sh \
     && chmod a+x /usr/local/bin/attr
 
 # Install gomplate
