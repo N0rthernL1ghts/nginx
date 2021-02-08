@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv bash
+set -e
+
+attr /var/www www-data:www-data 0770 2771
